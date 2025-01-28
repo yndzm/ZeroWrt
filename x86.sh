@@ -39,7 +39,7 @@ echo -e "${GREEN}更新并安装 feeds...${NC}"
 
 # 修改默认IP
 echo -e "${YELLOW}修改默认IP${NC}"
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.0.0.3/g' package/base-files/files/bin/config_generate
 
 # profile
 echo -e "${YELLOW}profile${NC}"
@@ -88,13 +88,13 @@ sed -i 's/option timeout 30/option timeout 60/g' package/system/rpcd/files/rpcd.
 sed -i 's#20) \* 1000#60) \* 1000#g' feeds/luci/modules/luci-base/htdocs/luci-static/resources/rpc.js
 
 # mwan3
-echo -e "${YELLOW}负载均衡${NC}"
-sed -i 's/MultiWAN 管理器/负载均衡/g' feeds/luci/applications/luci-app-mwan3/po/zh_Hans/mwan3.po
+# echo -e "${YELLOW}负载均衡${NC}"
+# sed -i 's/MultiWAN 管理器/负载均衡/g' feeds/luci/applications/luci-app-mwan3/po/zh_Hans/mwan3.po
 
 ##加入作者信息
 echo -e "${YELLOW}加入作者信息${NC}"
 sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='ZeroWrt-$(date +%Y%m%d)'/g"  package/base-files/files/etc/openwrt_release
-sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By OPPEN321'/g" package/base-files/files/etc/openwrt_release
+sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=' By Masaaki'/g" package/base-files/files/etc/openwrt_release
 
 # 更换为 ImmortalWrt Uboot 以及 Target
 echo -e "${YELLOW}更换为 ImmortalWrt Uboot 以及 Target${NC}"
@@ -142,8 +142,8 @@ echo -e "${YELLOW}SSRP & Passwall${NC}"
 git clone https://git.kejizero.online/zhao/openwrt_helloworld.git package/helloworld -b v5
 
 # Alist
-echo -e "${YELLOW}Alist${NC}"
-git clone https://git.kejizero.online/zhao/luci-app-alist package/alist
+# echo -e "${YELLOW}Alist${NC}"
+# git clone https://git.kejizero.online/zhao/luci-app-alist package/alist
 
 # Mosdns
 echo -e "${YELLOW}Mosdns${NC}"
@@ -151,8 +151,8 @@ git clone https://git.kejizero.online/zhao/luci-app-mosdns.git -b v5 package/mos
 git clone https://git.kejizero.online/zhao/v2ray-geodata.git package/v2ray-geodata
 
 # 锐捷认证
-echo -e "${YELLOW}锐捷认证${NC}"
-git clone https://github.com/sbwml/luci-app-mentohust package/mentohust
+# echo -e "${YELLOW}锐捷认证${NC}"
+# git clone https://github.com/sbwml/luci-app-mentohust package/mentohust
 
 # Realtek 网卡 - R8168 & R8125 & R8126 & R8152 & R8101
 echo -e "${YELLOW}Realtek 网卡 - R8168 & R8125 & R8126 & R8152 & R8101${NC}"
@@ -164,8 +164,8 @@ git clone https://git.kejizero.online/zhao/package_kernel_r8125 package/kernel/r
 git clone https://git.kejizero.online/zhao/package_kernel_r8126 package/kernel/r8126
 
 # Adguardhome
-echo -e "${YELLOW}Adguardhome${NC}"
-git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome
+# echo -e "${YELLOW}Adguardhome${NC}"
+# git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome
 
 # iStore
 echo -e "${YELLOW}iStore${NC}"
@@ -199,8 +199,8 @@ echo -e "${YELLOW}Zero-package${NC}"
 git clone --depth=1 https://github.com/oppen321/Zero-package package/Zero-package
 
 # 一键配置拨号
-echo -e "${YELLOW}一键配置拨号${NC}"
-git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
+# echo -e "${YELLOW}一键配置拨号${NC}"
+# git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
 
 # 修改名称
 echo -e "${YELLOW}修改名称${NC}"
@@ -219,20 +219,20 @@ echo -e "${YELLOW}Lucky${NC}"
 git clone https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # OpenAppFilter
-echo -e "${YELLOW}OpenAppFilter${NC}"
-git clone https://git.kejizero.online/zhao/OpenAppFilter --depth=1 package/OpenAppFilter
+# echo -e "${YELLOW}OpenAppFilter${NC}"
+# git clone https://git.kejizero.online/zhao/OpenAppFilter --depth=1 package/OpenAppFilter
 
 # luci-app-partexp
-echo -e "${YELLOW}luci-app-partexp${NC}"
-git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp package/luci-app-partexp
+# echo -e "${YELLOW}luci-app-partexp${NC}"
+# git clone --depth=1 https://github.com/sirpdboy/luci-app-partexp package/luci-app-partexp
 
 # 进阶设置
-echo -e "${YELLOW}进阶设置${NC}"
-git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
+# echo -e "${YELLOW}进阶设置${NC}"
+# git clone https://github.com/sirpdboy/luci-app-advancedplus package/luci-app-advancedplus
 
 # luci-app-webdav
-echo -e "${YELLOW}luci-app-webdav${NC}"
-git clone https://git.kejizero.online/zhao/luci-app-webdav package/new/luci-app-webdav
+# echo -e "${YELLOW}luci-app-webdav${NC}"
+# git clone https://git.kejizero.online/zhao/luci-app-webdav package/new/luci-app-webdav
 
 # unzip
 echo -e "${YELLOW}unzip${NC}"
@@ -240,10 +240,10 @@ rm -rf feeds/packages/utils/unzip
 git clone https://github.com/sbwml/feeds_packages_utils_unzip feeds/packages/utils/unzip
 
 # frpc名称
-echo -e "${YELLOW}frpc名称${NC}"
-sed -i 's,发送,Transmission,g' feeds/luci/applications/luci-app-transmission/po/zh_Hans/transmission.po
-sed -i 's,frp 服务器,FRP 服务器,g' feeds/luci/applications/luci-app-frps/po/zh_Hans/frps.po
-sed -i 's,frp 客户端,FRP 客户端,g' feeds/luci/applications/luci-app-frpc/po/zh_Hans/frpc.po
+# echo -e "${YELLOW}frpc名称${NC}"
+# sed -i 's,发送,Transmission,g' feeds/luci/applications/luci-app-transmission/po/zh_Hans/transmission.po
+# sed -i 's,frp 服务器,FRP 服务器,g' feeds/luci/applications/luci-app-frps/po/zh_Hans/frps.po
+# sed -i 's,frp 客户端,FRP 客户端,g' feeds/luci/applications/luci-app-frpc/po/zh_Hans/frpc.po
 
 # 必要的补丁
 echo -e "${YELLOW}必要的补丁${NC}"
@@ -268,12 +268,12 @@ curl -L -o files/root/version.txt https://git.kejizero.online/zhao/files/raw/bra
 chmod +x files/root/version.txt
 
 # Adguardhome设置
-echo -e "${YELLOW}Adguardhome设置${NC}"
-mkdir -p files/etc
-curl -L -o files/etc/AdGuardHome-dnslist.yaml https://git.kejizero.online/zhao/files/raw/branch/main/etc/AdGuardHome-dnslist.yaml
-chmod +x files/etc/AdGuardHome-dnslist.yaml
-curl -L -o files/etc/AdGuardHome-mosdns.yaml https://git.kejizero.online/zhao/files/raw/branch/main/etc/AdGuardHome-mosdns.yaml
-chmod +x files/etc/AdGuardHome-mosdns.yaml
+# echo -e "${YELLOW}Adguardhome设置${NC}"
+# mkdir -p files/etc
+# curl -L -o files/etc/AdGuardHome-dnslist.yaml https://git.kejizero.online/zhao/files/raw/branch/main/etc/AdGuardHome-dnslist.yaml
+# chmod +x files/etc/AdGuardHome-dnslist.yaml
+# curl -L -o files/etc/AdGuardHome-mosdns.yaml https://git.kejizero.online/zhao/files/raw/branch/main/etc/AdGuardHome-mosdns.yaml
+# chmod +x files/etc/AdGuardHome-mosdns.yaml
 
 # Nginx
 echo -e "${YELLOW}Nginx${NC}"
