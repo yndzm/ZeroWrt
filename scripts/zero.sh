@@ -14,4 +14,4 @@ curl -L -o files/etc/config/default_dhcp.conf https://raw.githubusercontent.com/
 chmod +x files/etc/config/default_dhcp.conf
 
 # 更新default-settings
-curl -L -o package/lean/default-settings/files/zzz-default-settings https://raw.githubusercontent.com/oppen321/ZeroWrt/refs/heads/master/files/zzz-default-settings
+curl -L -o package/lean/default-settings/files/zzz-default-settings https://raw.githubusercontent.com/yndzm/ZeroWrt/refs/heads/master/files/zzz-default-settings
